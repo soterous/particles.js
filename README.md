@@ -183,7 +183,7 @@ key | option type / notes | example
 `particles.line_linked.width` | number | `1.5`
 `particles.move.enable` | boolean | `true` / `false`
 `particles.move.speed` | number | `4`
-`particles.move.direction` | string | `"none"` <br /> `"top"` <br /> `"top-right"` <br /> `"right"` <br /> `"bottom-right"` <br /> `"bottom"` <br /> `"bottom-left"` <br /> `"left"` <br /> `"top-left"`
+`particles.move.direction` | string | `"none"` <br /> `"top"` <br /> `"top-right"` <br /> `"right"` <br /> `"bottom-right"` <br /> `"bottom"` <br /> `"bottom-left"` <br /> `"left"` <br /> `"top-left"` <br /> `"top-bottom"` <br /> `"left-right"` <br /> `"top-left-bottom-right"` <br /> `"top-right-bottom-left"`
 `particles.move.random` | boolean | `true` / `false`
 `particles.move.straight` | boolean | `true` / `false`
 `particles.move.out_mode` | string <br /> (out of canvas) | `"out"` <br /> `"bounce"`

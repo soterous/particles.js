@@ -312,9 +312,29 @@ var pJS = function(tag_id, params){
       }
     }
 
+    /* Resolve mixed/criss-cross directions by randomly picking a direction */
+    var direction = (function (d) {
+      switch(d) {
+        case 'top-bottom':
+        case 'bottom-top':
+          return Math.random() >= 0.5 ? 'top' : 'bottom';
+        case 'right-left':
+        case 'left-right':
+          return Math.random() >= 0.5 ? 'right' : 'left';
+        case 'top-right-bottom-left':
+        case 'bottom-left-top-right':
+          return Math.random() >= 0.5 ? 'top-right' : 'bottom-left';
+        case 'top-left-bottom-right':
+        case 'bottom-right-top-left':
+          return Math.random() >= 0.5 ? 'top-left' : 'bottom-right';
+        default:
+          return d;
+      }
+    })(pJS.particles.move.direction);
+
     /* animation - velocity for speed */
     var velbase = {}
-    switch(pJS.particles.move.direction){
+    switch(direction){
       case 'top':
         velbase = { x:0, y:-1 };
       break;
